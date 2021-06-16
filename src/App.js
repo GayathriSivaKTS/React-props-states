@@ -1,23 +1,58 @@
-import logo from './logo.svg';
+//import logo from './logo.svg';
+import React from 'react';
 import './App.css';
+
+class MyClass extends React.Component 
+{
+render()
+{
+  
+  return(
+    <div className="App">
+    <h1>this is a Class Component</h1>
+    <MySecClass></MySecClass>
+    <Mythirdclass></Mythirdclass>
+    </div>
+  );
+}
+}
+
+class MySecClass extends React.Component 
+{
+render()
+{
+  return(
+     
+    <h1>this is a  second Class Component</h1>
+  );
+}
+}
+class Mythirdclass extends React.Component 
+{
+render()
+{
+  return(
+    <h1>this is a third Class Component</h1>
+  );
+}
+}
+
+function FourthClass()
+{
+  return(
+    <div>
+      <h1>this is fourth class component</h1>
+    </div>
+  );
+}
+
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+   <MyClass></MyClass>
+  
+  <FourthClass></FourthClass>
     </div>
   );
 }
